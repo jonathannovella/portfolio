@@ -1,0 +1,87 @@
+body {
+    background-color: white;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 100vh;
+
+}
+.image{
+
+    width: 50%;
+
+}
+
+.presentation {
+    color: rgb(83, 83, 83);
+    font-family: sans-serif, cursive;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 0.2;
+}
+.text{
+    margin-top: 80px;
+    width: 50%;
+
+    
+}
+.spanContainer{
+    height: 60px;
+}
+
+.name {
+    color: var(--colorLeters);
+    font-family: sans-serif, cursive;
+    font-weight: 800;
+    font-size: 30px;
+    
+
+}
+.text span{
+    line-height: 1;
+    text-align: center;
+}
+.image img{
+    opacity: 0;
+    transform: scale(1);
+    transition: 1.2s ease-in-out all;
+}
+
+.image img.derecha{
+    transform: translateX(100px);
+}
+
+.image img.visible{
+    opacity: 1;
+    transform: scale(0.9);
+    transform: translateX(0px)
+}
+
+@media (max-width: 700px) {
+ 
+    .container{
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: 10%;
+        height: 600px;
+        margin: 0px;
+       
+    }
+    .text{
+        width: 100%;
+    }
+    .image img{
+        display: none;
+        height: 60px;
+    }
+    .text img{
+       margin-top: 50px;
+    
+    }
+ }
